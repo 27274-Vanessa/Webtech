@@ -12,7 +12,6 @@ public class StudentController {
 
     private List<Student> students = new ArrayList<>();
 
-    // 5 SAMPLE STUDENTS
     public StudentController() {
         students.add(new Student(1L, "Alice", "Smith",
                 "alice@example.com", "Computer Science", 3.8));
@@ -26,13 +25,11 @@ public class StudentController {
                 "eva@example.com", "Computer Science", 3.9));
     }
 
-    // GET /api/students
     @GetMapping
     public List<Student> getAllStudents() {
         return students;
     }
 
-    // GET /api/students/{studentId}
     @GetMapping("/{studentId}")
     public Student getStudentById(@PathVariable Long studentId) {
         for (Student student : students) {
@@ -43,7 +40,6 @@ public class StudentController {
         return null;
     }
 
-    // GET /api/students/major/{major}
     @GetMapping("/major/{major}")
     public List<Student> getStudentsByMajor(@PathVariable String major) {
         List<Student> result = new ArrayList<>();
@@ -55,7 +51,6 @@ public class StudentController {
         return result;
     }
 
-    // GET /api/students/filter?gpa=3.5
     @GetMapping("/filter")
     public List<Student> filterByGpa(@RequestParam Double gpa) {
         List<Student> result = new ArrayList<>();
@@ -67,14 +62,12 @@ public class StudentController {
         return result;
     }
 
-    // POST /api/students
     @PostMapping
     public Student addStudent(@RequestBody Student student) {
         students.add(student);
         return student;
     }
 
-    // PUT /api/students/{studentId}
     @PutMapping("/{studentId}")
     public Student updateStudent(@PathVariable Long studentId,
             @RequestBody Student updatedStudent) {

@@ -28,7 +28,6 @@ public class ProductController {
         products.add(new Product(10L, "Tablet", "Android tablet", 400.0, "Electronics", 6, "Samsung"));
     }
 
-    // GET /api/products?page=&limit=
     @GetMapping
     public List<Product> getAllProducts(
             @RequestParam(defaultValue = "0") int page,
@@ -43,7 +42,6 @@ public class ProductController {
         return products.subList(start, end);
     }
 
-    // GET /api/products/{productId}
     @GetMapping("/{productId}")
     public ResponseEntity<Product> getProductById(@PathVariable Long productId) {
         return products.stream()
@@ -53,7 +51,6 @@ public class ProductController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // GET /api/products/category/{category}
     @GetMapping("/category/{category}")
     public List<Product> getByCategory(@PathVariable String category) {
         return products.stream()
@@ -61,7 +58,6 @@ public class ProductController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/products/brand/{brand}
     @GetMapping("/brand/{brand}")
     public List<Product> getByBrand(@PathVariable String brand) {
         return products.stream()
@@ -69,7 +65,6 @@ public class ProductController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/products/search?keyword=
     @GetMapping("/search")
     public List<Product> searchProducts(@RequestParam String keyword) {
         return products.stream()
@@ -78,7 +73,6 @@ public class ProductController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/products/price-range?min=&max=
     @GetMapping("/price-range")
     public List<Product> getByPriceRange(@RequestParam double min, @RequestParam double max) {
         return products.stream()
@@ -86,7 +80,6 @@ public class ProductController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/products/in-stock
     @GetMapping("/in-stock")
     public List<Product> getInStockProducts() {
         return products.stream()
@@ -94,14 +87,12 @@ public class ProductController {
                 .collect(Collectors.toList());
     }
 
-    // POST /api/products
     @PostMapping
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
         products.add(product);
         return new ResponseEntity<>(product, HttpStatus.CREATED);
     }
 
-    // PUT /api/products/{productId}
     @PutMapping("/{productId}")
     public ResponseEntity<Product> updateProduct(
             @PathVariable Long productId,
@@ -121,7 +112,6 @@ public class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    // PATCH /api/products/{productId}/stock?quantity=
     @PatchMapping("/{productId}/stock")
     public ResponseEntity<Product> updateStock(
             @PathVariable Long productId,
@@ -136,7 +126,6 @@ public class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    // DELETE /api/products/{productId}
     @DeleteMapping("/{productId}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long productId) {
         products.removeIf(p -> p.getProductId().equals(productId));

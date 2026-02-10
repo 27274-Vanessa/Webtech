@@ -29,7 +29,6 @@ public class TaskController {
         return tasks;
     }
 
-    // GET /api/tasks/{taskId}
     @GetMapping("/{taskId}")
     public ResponseEntity<Task> getTaskById(@PathVariable Long taskId) {
         return tasks.stream()
@@ -39,7 +38,6 @@ public class TaskController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // GET /api/tasks/status?completed=true
     @GetMapping("/status")
     public List<Task> getByStatus(@RequestParam boolean completed) {
         return tasks.stream()
@@ -47,7 +45,6 @@ public class TaskController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/tasks/priority/{priority}
     @GetMapping("/priority/{priority}")
     public List<Task> getByPriority(@PathVariable String priority) {
         return tasks.stream()
@@ -55,14 +52,12 @@ public class TaskController {
                 .collect(Collectors.toList());
     }
 
-    // POST /api/tasks
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
         tasks.add(task);
         return new ResponseEntity<>(task, HttpStatus.CREATED);
     }
 
-    // PUT /api/tasks/{taskId}
     @PutMapping("/{taskId}")
     public ResponseEntity<Task> updateTask(
             @PathVariable Long taskId,
@@ -81,7 +76,6 @@ public class TaskController {
         return ResponseEntity.notFound().build();
     }
 
-    // PATCH /api/tasks/{taskId}/complete
     @PatchMapping("/{taskId}/complete")
     public ResponseEntity<Task> markCompleted(@PathVariable Long taskId) {
         for (Task t : tasks) {
@@ -93,7 +87,6 @@ public class TaskController {
         return ResponseEntity.notFound().build();
     }
 
-    // DELETE /api/tasks/{taskId}
     @DeleteMapping("/{taskId}")
     public ResponseEntity<String> deleteTask(@PathVariable Long taskId) {
         tasks.removeIf(t -> t.getTaskId().equals(taskId));

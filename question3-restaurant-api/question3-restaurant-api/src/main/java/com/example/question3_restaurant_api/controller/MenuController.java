@@ -24,13 +24,11 @@ public class MenuController {
         menuItems.add(new MenuItem(8L, "Salad", "Fresh salad", 7.0, "Appetizer", false));
     }
 
-    // GET /api/menu
     @GetMapping
     public List<MenuItem> getAllMenuItems() {
         return menuItems;
     }
 
-    // GET /api/menu/{id}
     @GetMapping("/{id}")
     public MenuItem getMenuItemById(@PathVariable Long id) {
         return menuItems.stream()
@@ -39,7 +37,6 @@ public class MenuController {
                 .orElse(null);
     }
 
-    // GET /api/menu/category/{category}
     @GetMapping("/category/{category}")
     public List<MenuItem> getByCategory(@PathVariable String category) {
         return menuItems.stream()
@@ -47,7 +44,6 @@ public class MenuController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/menu/available?available=true
     @GetMapping("/available")
     public List<MenuItem> getAvailableItems(@RequestParam boolean available) {
         return menuItems.stream()
@@ -55,7 +51,6 @@ public class MenuController {
                 .collect(Collectors.toList());
     }
 
-    // GET /api/menu/search?name=coffee
     @GetMapping("/search")
     public List<MenuItem> searchByName(@RequestParam String name) {
         return menuItems.stream()
@@ -63,14 +58,12 @@ public class MenuController {
                 .collect(Collectors.toList());
     }
 
-    // POST /api/menu
     @PostMapping
     public MenuItem addMenuItem(@RequestBody MenuItem menuItem) {
         menuItems.add(menuItem);
         return menuItem;
     }
 
-    // PUT /api/menu/{id}/availability
     @PutMapping("/{id}/availability")
     public MenuItem toggleAvailability(@PathVariable Long id) {
         for (MenuItem item : menuItems) {
@@ -82,7 +75,6 @@ public class MenuController {
         return null;
     }
 
-    // DELETE /api/menu/{id}
     @DeleteMapping("/{id}")
     public String deleteMenuItem(@PathVariable Long id) {
         menuItems.removeIf(item -> item.getId().equals(id));

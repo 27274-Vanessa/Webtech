@@ -17,13 +17,11 @@ public class BookController {
         books.add(new Book(2, "Effective Java", "Joshua Bloch"));
     }
 
-    // GET /api/books
     @GetMapping
     public List<Book> getAllBooks() {
         return books;
     }
 
-    // GET /api/books/{id}
     @GetMapping("/{id}")
     public Book getBookById(@PathVariable int id) {
         for (Book book : books) {
