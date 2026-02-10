@@ -12,8 +12,8 @@
 
 | Endpoint                          | Method | Description              | Sample response                     | Screenshot                                                                  |
 | --------------------------------- | -----: | ------------------------ | ----------------------------------- | --------------------------------------------------------------------------- |
-| `/api/books`                      |    GET | Return list of all books | [{"id":1,"title":"Clean Code",...}] | [![get books](screenshoots/get books.png)](screenshoots/get books.png)      |
-| `/api/books/{id}`                 |    GET | Get book by id           | {"id":1,"title":"Clean Code",...}   | [![library id](screenshoots/library id .png)](screenshoots/library id .png) |
+| `/api/books`                      |    GET | Return list of all books | [{"id":1,"title":"Clean Code",...}] | [![get books](screenshoots/get%20books.png)](screenshoots/get%20books.png)      |
+| `/api/books/{id}`                 |    GET | Get book by id           | {"id":1,"title":"Clean Code",...}   | [![library id](screenshoots/library%20id%20.png)](screenshoots/library%20id%20.png) |
 | `/api/books/search?title={title}` |    GET | Search books by title    | [ ... ]                             | (no screenshot)                                                             |
 | `/api/books`                      |   POST | Add new Book (JSON body) | 201 Created, created Book JSON      | (no screenshot)                                                             |
 | `/api/books/{id}`                 | DELETE | Delete book by id        | 204 No Content                      | (no screenshot)                                                             |
@@ -26,12 +26,12 @@
 
 | Endpoint                            | Method | Description           | Screenshot                                                                                     |
 | ----------------------------------- | -----: | --------------------- | ---------------------------------------------------------------------------------------------- |
-| `/api/students`                     |    GET | Get all students      | [![Students list](screenshoots/Stugent get.png)](screenshoots/Stugent get.png)                 |
-| `/api/students/{studentId}`         |    GET | Get student by ID     | [![get by id](screenshoots/getting student y id .png)](screenshoots/getting student y id .png) |
-| `/api/students/major/{major}`       |    GET | Get students by major | [![by major](screenshoots/student by major .png)](screenshoots/student by major .png)          |
-| `/api/students/filter?gpa={minGpa}` |    GET | Filter by min GPA     | [![by gpa](screenshoots/Students by gpa.png)](screenshoots/Students by gpa.png)                |
-| `/api/students`                     |   POST | Register new student  | [![create](screenshoots/student creation .png)](screenshoots/student creation .png)            |
-| `/api/students/{studentId}`         |    PUT | Update student info   | [![put](screenshoots/student Put.png)](screenshoots/student Put.png)                           |
+| `/api/students`                     |    GET | Get all students      | [![Students list](screenshoots/Stugent%20get.png)](screenshoots/Stugent%20get.png)                 |
+| `/api/students/{studentId}`         |    GET | Get student by ID     | [![get by id](screenshoots/getting%20student%20y%20id%20.png)](screenshoots/getting%20student%20y%20id%20.png) |
+| `/api/students/major/{major}`       |    GET | Get students by major | [![by major](screenshoots/student%20by%20major%20.png)](screenshoots/student%20by%20major%20.png)          |
+| `/api/students/filter?gpa={minGpa}` |    GET | Filter by min GPA     | [![by gpa](screenshoots/Students%20by%20gpa.png)](screenshoots/Students%20by%20gpa.png)                |
+| `/api/students`                     |   POST | Register new student  | [![create](screenshoots/student%20creation%20.png)](screenshoots/student%20creation%20.png)            |
+| `/api/students/{studentId}`         |    PUT | Update student info   | [![put](screenshoots/student%20Put.png)](screenshoots/student%20Put.png)                           |
 
 ---
 
@@ -41,14 +41,14 @@
 
 | Endpoint                             | Method | Description               | Screenshot                                                                                     |
 | ------------------------------------ | -----: | ------------------------- | ---------------------------------------------------------------------------------------------- |
-| `/api/menu`                          |    GET | Get all menu items        | [![all menu](screenshoots/get all menu.png)](screenshoots/get all menu.png)                    |
-| `/api/menu/{id}`                     |    GET | Get menu item by id       | [![menu id](screenshoots/menu by id .png)](screenshoots/menu by id .png)                       |
-| `/api/menu/category/{category}`      |    GET | Get items by category     | [![by category](screenshoots/menu by category .png)](screenshoots/menu by category .png)       |
-| `/api/menu/available?available=true` |    GET | Get available items       | [![available](screenshoots/Menu if available .png)](screenshoots/Menu if available .png)       |
-| `/api/menu/search?name={name}`       |    GET | Search menu items by name | [![search name](screenshoots/get name menu.png)](screenshoots/get name menu.png)               |
-| `/api/menu`                          |   POST | Add new menu item         | [![add menu](screenshoots/add menu .png)](screenshoots/add menu .png)                          |
-| `/api/menu/{id}/availability`        |    PUT | Toggle availability       | [![put available](screenshoots/put menu available .png)](screenshoots/put menu available .png) |
-| `/api/menu/{id}`                     | DELETE | Remove menu item          | [![delete menu](screenshoots/delete menu item.png)](screenshoots/delete menu item.png)         |
+| `/api/menu`                          |    GET | Get all menu items        | [![all menu](screenshoots/get%20all%20menu.png)](screenshoots/get%20all%20menu.png)                    |
+| `/api/menu/{id}`                     |    GET | Get menu item by id       | [![menu id](screenshoots/menu%20by%20id%20.png)](screenshoots/menu%20by%20id%20.png)                       |
+| `/api/menu/category/{category}`      |    GET | Get items by category     | [![by category](screenshoots/menu%20by%20category%20.png)](screenshoots/menu%20by%20category%20.png)       |
+| `/api/menu/available?available=true` |    GET | Get available items       | [![available](screenshoots/Menu%20if%20available%20.png)](screenshoots/Menu%20if%20available%20.png)       |
+| `/api/menu/search?name={name}`       |    GET | Search menu items by name | [![search name](screenshoots/get%20name%20menu.png)](screenshoots/get%20name%20menu.png)               |
+| `/api/menu`                          |   POST | Add new menu item         | [![add menu](screenshoots/add%20menu%20.png)](screenshoots/add%20menu%20.png)                          |
+| `/api/menu/{id}/availability`        |    PUT | Toggle availability       | [![put available](screenshoots/put%20menu%20available%20.png)](screenshoots/put%20menu%20available%20.png) |
+| `/api/menu/{id}`                     | DELETE | Remove menu item          | [![delete menu](screenshoots/delete%20menu%20item.png)](screenshoots/delete%20menu%20item.png)         |
 
 ---
 
@@ -58,17 +58,17 @@
 
 | Endpoint                                              | Method | Description                                 | Screenshot                                                                                                               |
 | ----------------------------------------------------- | -----: | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `/api/products`                                       |    GET | Get all products (supports `?page=&limit=`) | [![all products](screenshoots/Get all products.png)](screenshoots/Get all products.png)                                  |
-| `/api/products/{productId}`                           |    GET | Get product details                         | [![by id](screenshoots/get product by id .png)](screenshoots/get product by id .png)                                     |
-| `/api/products/category/{category}`                   |    GET | Get products by category                    | [![by category](screenshoots/get product by category .png)](screenshoots/get product by category .png)                   |
-| `/api/products/brand/{brand}`                         |    GET | Get products by brand                       | [![by brand](screenshoots/get products by brand .png)](screenshoots/get products by brand .png)                          |
-| `/api/products/search?keyword={keyword}`              |    GET | Search products by keyword                  | [![search](screenshoots/search products by keyword.png)](screenshoots/search products by keyword.png)                    |
-| `/api/products/price-range?min={min}&max={max}`       |    GET | Get products within price range             | [![price range](screenshoots/get product within product range .png)](screenshoots/get product within product range .png) |
-| `/api/products/in-stock`                              |    GET | Products with stockQuantity > 0             | [![in stock](screenshoots/get pro in stock.png)](screenshoots/get pro in stock.png)                                      |
-| `/api/products`                                       |   POST | Add new product                             | [![add product](screenshoots/add new product.png)](screenshoots/add new product.png)                                     |
-| `/api/products/{productId}`                           |    PUT | Update product details                      | [![put product](screenshoots/put ptoduct details .png)](screenshoots/put ptoduct details .png)                           |
+| `/api/products`                                       |    GET | Get all products (supports `?page=&limit=`) | [![all products](screenshoots/Get%20all%20products.png)](screenshoots/Get%20all%20products.png)                                  |
+| `/api/products/{productId}`                           |    GET | Get product details                         | [![by id](screenshoots/get%20product%20by%20id%20.png)](screenshoots/get%20product%20by%20id%20.png)                                     |
+| `/api/products/category/{category}`                   |    GET | Get products by category                    | [![by category](screenshoots/get%20product%20by%20category%20.png)](screenshoots/get%20product%20by%20category%20.png)                   |
+| `/api/products/brand/{brand}`                         |    GET | Get products by brand                       | [![by brand](screenshoots/get%20products%20by%20brand%20.png)](screenshoots/get%20products%20by%20brand%20.png)                          |
+| `/api/products/search?keyword={keyword}`              |    GET | Search products by keyword                  | [![search](screenshoots/search%20products%20by%20keyword.png)](screenshoots/search%20products%20by%20keyword.png)                    |
+| `/api/products/price-range?min={min}&max={max}`       |    GET | Get products within price range             | [![price range](screenshoots/get%20product%20within%20product%20range%20.png)](screenshoots/get%20product%20within%20product%20range%20.png) |
+| `/api/products/in-stock`                              |    GET | Products with stockQuantity > 0             | [![in stock](screenshoots/get%20pro%20in%20stock.png)](screenshoots/get%20pro%20in%20stock.png)                                      |
+| `/api/products`                                       |   POST | Add new product                             | [![add product](screenshoots/add%20new%20product.png)](screenshoots/add%20new%20product.png)                                     |
+| `/api/products/{productId}`                           |    PUT | Update product details                      | [![put product](screenshoots/put%20ptoduct%20details%20.png)](screenshoots/put%20ptoduct%20details%20.png)                           |
 | `/api/products/{productId}/stock?quantity={quantity}` |  PATCH | Update stock quantity                       | (no screenshot)                                                                                                          |
-| `/api/products/{productId}`                           | DELETE | Delete product                              | [![delete?](screenshoots/get product by id .png)](screenshoots/get product by id .png)                                   |
+| `/api/products/{productId}`                           | DELETE | Delete product                              | [![delete?](screenshoots/get%20product%20by%20id%20.png)](screenshoots/get%20product%20by%20id%20.png)                                   |
 
 ---
 
