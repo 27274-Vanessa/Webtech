@@ -14,9 +14,9 @@
 | --------------------------------- | -----: | ------------------------ | ----------------------------------- | ----------------------------------------------------------------------------------- |
 | `/api/books`                      |    GET | Return list of all books | [{"id":1,"title":"Clean Code",...}] | [![get books](screenshoots/get%20books.png)](screenshoots/get%20books.png)          |
 | `/api/books/{id}`                 |    GET | Get book by id           | {"id":1,"title":"Clean Code",...}   | [![library id](screenshoots/library%20id%20.png)](screenshoots/library%20id%20.png) |
-| `/api/books/search?title={title}` |    GET | Search books by title    | [ ... ]                             | (no screenshot)                                                                     |
-| `/api/books`                      |   POST | Add new Book (JSON body) | 201 Created, created Book JSON      | (no screenshot)                                                                     |
-| `/api/books/{id}`                 | DELETE | Delete book by id        | 204 No Content                      | (no screenshot)                                                                     |
+| `/api/books/search?title={title}` |    GET | Search books by title    | [ ... ]                             | [(![library id](screenshoots/Search%20books%20by%20title.png))                      |
+| `/api/books`                      |   POST | Add new Book (JSON body) | 201 Created, created Book JSON      | ([![add a new book](screenshoots/Add%20a%20new%20book.png))                         |
+| `/api/books/{id}`                 | DELETE | Delete book by id        | 204 No Content                      | ([![Delete a book](screenshoots/Delete%20a%20book%20by%20ID.png))                   |
 
 ---
 
@@ -93,32 +93,11 @@
 
 - Project: `bonus-userprofile-api`
 
-Endpoints (examples):
+-GET [![All Users](screenshoots/get%20users%20.png)]
+-GET [![Users bu usernames](screenshoots/Get%20users%20by%20username.png)]
 
-- GET `/api/users`
-- GET `/api/users/{userId}`
-- POST `/api/users` (create)
-- PUT `/api/users/{userId}` (update)
-- DELETE `/api/users/{userId}`
-- GET `/api/users/search?username={username}`
-- GET `/api/users/country/{country}`
-- GET `/api/users/age-range?min={min}&max={max}`
-- PUT `/api/users/{userId}/activate`
-- PUT `/api/users/{userId}/deactivate`
+- DELETE [![Delete User](screenshoots/user%20deleting%201.png)]
+- GET ![Users by username](screenshoots/Get%20users%20by%20username.png)
+- PUT ![Activate](screenshoots/Patch%20activate%20.png)
 
 ---
-
-Notes:
-
-- Screenshot files are stored in the project's root `screenshoots/` folder and referenced above. Filenames were used as-is — spaces and typos kept to match filenames.
-- When you provide the screenshots for Question 5 and Bonus, tell me and I will add them into the README in the appropriate table cells.
-
----
-
-If you'd like, I can also:
-
-- Generate a Postman collection from these endpoints,
-- Add exact sample request bodies for POST/PUT/PATCH operations,
-- Or insert the screenshots inline as full-sized images instead of small thumbnails.
-
-Tell me which next step you want.
